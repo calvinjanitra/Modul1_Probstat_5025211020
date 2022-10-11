@@ -165,4 +165,11 @@ z
 
 
 ### B. Generate Histogram dari Distribusi Normal dengan breaks 50
-### C. 
+![image](https://user-images.githubusercontent.com/95208578/195183018-fd5ee681-1be4-4ee3-8ff7-6abd5ab622c2.png)
+### C. Nilai Varian (σ²)
+Nilai varian didapatkan dari
+```
+varian = sd^2
+paste("Varian : ", varian)
+```
+![image](https://user-images.githubusercontent.com/95208578/195183314-a6c8f57e-5eb3-4f94-aae2-d22803b0e4a0.png)
