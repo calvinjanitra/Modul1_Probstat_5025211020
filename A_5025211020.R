@@ -37,12 +37,9 @@ a = dbinom(pasienSembuh,n,peluangSembuh)
 a
 
 #2.b Gambarkan grafik histogram berdasarkan kasus tersebut
-x <- 0:20
-plot(x,dbinom(x,n,peluangSembuh),
-     type = 'h',
-     main='Distribusi Binomial',
-     ylab='Peluang',
-     xlab = 'jumlah n')
+hist(rbinom(20, 20, 0.2),
+     main = "Histogram Distribusi Binomial",
+     xlab = "x")
 
 #2.c Nilai rataan dan varian dari distribusi normal
 rataan = pasienSembuh * peluangSembuh
@@ -100,15 +97,22 @@ paste("Nilai Varian : ", varian)
 #5 Diketahui bilangan acak (random variable) berdistribusi exponential (λ = 3). Tentukan
 
 #5.a Fungsi Probabilitas dan Distribusi Eksponensial
-n <- 10
 lambda <- 3
-paste("Hasil : ", rexp(n,rate = lambda))
-
+peluang <- dexp(1, lambda)
+peluang
 #5.b Histogram dan Distribusi Eksponensial untuk 10,100,1000, dan 10000 bilangan random
-hist(rexp(10, rate = lambda), main = "Distribusi Eksonensial untuk 10 bilangan random")
-hist(rexp(100, rate = lambda), main = "Distribusi Eksonensial untuk 100 bilangan random")
-hist(rexp(1000, rate = lambda), main = "Distribusi Eksonensial untuk 1000 bilangan random")
-hist(rexp(10000, rate = lambda), main = "Distribusi Eksonensial untuk 10000 bilangan random")
+hist(rexp(10, lambda),
+     main = "Distribusi Exponensial untuk 10 Bilangan Random",
+     xlab = "x")
+hist(rexp(100, lambda),
+     main = "Distribusi Exponensial untuk 100 Bilangan Random",
+     xlab = "x")
+hist(rexp(1000, lambda),
+     main = "Distribusi Exponensial untuk 1000 Bilangan Random",
+     xlab = "x")
+hist(rexp(10000, lambda),
+     main = "Distribusi Exponensial untuk 10000 Bilangan Random",
+     xlab = "x")
 
 #5.c Nilai Rataan dan Varian dari distribusi eksponensial untuk n = 100 dan λ = 3
 
@@ -129,13 +133,23 @@ n <- 100
 mean <- 50
 sd <- 8
 
-z = rnorm(n, mean, sd)
-z
+rand = rnorm(n, mean, sd)
+mean <- mean(rand)
+sd <- sd(rand)
+
+x1 <- sample(subset(rand, rand > mean), 1)
+x2 <- sample(subset(rand, rand < mean), 1)
+
+peluang <- pnorm(x1, mean, sd) - pnorm(x2, mean, sd)
+paste("Peluang : ", peluang)
+z<- qnorm(peluang, mean, sd)
+paste("Z-Score : ",z)
+plot(rand, type = 'h', xlab = "x")
 #6.b Generate histogram dari distribusi normal dengan breaks 50 dan format penamaan
-x <- rnorm(100,50,8)
-hist(x,
+hist(rand,
      breaks = 50,
-     main = "5025211020_Calvin Janitra_Probstat_Probstat A_DNhistogram")
+     main = "5025211020_Calvin Janitra_Probstat_Probstat A_DNhistogram",
+     xlab = "x")
 
 #6.c Nilai varian dan hasil generate random nilai distribusi normal
 varian = sd^2
