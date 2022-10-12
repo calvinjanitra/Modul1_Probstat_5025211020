@@ -158,14 +158,25 @@ n <- 100
 mean <- 50
 sd <- 8
 
-z = rnorm(n, mean, sd)
-z
+rand = rnorm(n, mean, sd)
+mean <- mean(rand)
+sd <- sd(rand)
+
+x1 <- sample(subset(rand, rand > mean), 1)
+x2 <- sample(subset(rand, rand < mean), 1)
+
+peluang <- pnorm(x1, mean, sd) - pnorm(x2, mean, sd)
+paste("Peluang : ", peluang)
+z<- qnorm(peluang, mean, sd)
+paste("Z-Score : ",z)
+plot(rand, type = 'h', xlab = "x")
 ```
-![image](https://user-images.githubusercontent.com/95208578/195182493-cf0f4f3f-41b8-47bd-9ddb-939d6adde4cf.png)
+![image](https://user-images.githubusercontent.com/95208578/195367757-7d4014d6-01cf-4e0d-864a-7c676fe7724e.png)
+![image](https://user-images.githubusercontent.com/95208578/195367879-f938b153-6bf4-4636-af62-484ff10548be.png)
 
 
 ### B. Generate Histogram dari Distribusi Normal dengan breaks 50
-![image](https://user-images.githubusercontent.com/95208578/195183018-fd5ee681-1be4-4ee3-8ff7-6abd5ab622c2.png)
+![image](https://user-images.githubusercontent.com/95208578/195368255-ec76bfa0-ba39-4c26-a268-8469625bd6ea.png)
 ### C. Nilai Varian (σ²)
 Nilai varian didapatkan dari
 ```
