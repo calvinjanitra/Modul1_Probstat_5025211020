@@ -32,6 +32,9 @@ Rgeom adalah distribusi geometrik acak, generate sebuah nilai pada setiap sampel
 Poin A akan selalu menghasilkan nilai peluang yang tetap sedangkan Poin B mendapatkan hasil yang berbeda-beda. Tetapi hasil yang didapatkan di B merupakan estimasi karena hasil poin B selalu mendekati dengan poin A
 ```
 ### D. Histogram Distribusi Geometrik , Peluang X = 3 gagal Sebelum Sukses Pertama
+```
+hist(rgeom(n,prob = 0.20), main = "Histogram Distribusi Geometrik")
+```
 ![1d](https://user-images.githubusercontent.com/95208578/195175161-182fa789-2814-4db4-9182-185df2880d4c.png)
 
 ### E. Nilai Rataan (μ) dan Varian (σ²)
@@ -87,7 +90,11 @@ paste("Hasil : ",dpois(x,lambda))
 ![image](https://user-images.githubusercontent.com/95208578/195179575-199d8757-2e05-4d28-ba98-a4f2f9325d61.png)
 
 ### B. Simulasikan dan buatlah histogram kelahiran 6 bayi akan lahir di rumah sakit ini  selama setahun
-
+```
+set.seed(0)
+interval = 1:365
+hist(rpois(interval, lambda), type="h")
+```
 ![image](https://user-images.githubusercontent.com/95208578/195178795-c80eba44-c511-4ab6-b438-4d0e070ccc1b.png)
 ### C. Bandingkan hasil poin a dan b
 ```
@@ -115,6 +122,9 @@ dchisq(x,v,ncp=0)
 ![image](https://user-images.githubusercontent.com/95208578/195180039-93a62081-2a45-4c07-b04c-4cc17352bfb4.png)
 
 ### B. Histogram dari Distribusi Chi-Square dengan 100 data random
+```
+hist(rchisq(100,v), main = "Distribusi Chi-Square dengan 100 data random", labels = T)
+```
 ![image](https://user-images.githubusercontent.com/95208578/195180166-08d26705-553f-4808-8a01-4ac05264f901.png)
 
 ### C. Nilai Rataan (μ) dan Varian (σ²)
@@ -137,6 +147,20 @@ peluang
 ```
 ![image](https://user-images.githubusercontent.com/95208578/195365276-1639b20a-9b04-4b4b-8a0a-5c3050353ab9.png)
 ### B. Histogram dari Distribusi Exponensial untuk 10, 100, 1000 dan 10000 bilangan random
+```
+hist(rexp(10, lambda),
+     main = "Distribusi Exponensial untuk 10 Bilangan Random",
+     xlab = "x")
+hist(rexp(100, lambda),
+     main = "Distribusi Exponensial untuk 100 Bilangan Random",
+     xlab = "x")
+hist(rexp(1000, lambda),
+     main = "Distribusi Exponensial untuk 1000 Bilangan Random",
+     xlab = "x")
+hist(rexp(10000, lambda),
+     main = "Distribusi Exponensial untuk 10000 Bilangan Random",
+     xlab = "x")
+```
 ![image](https://user-images.githubusercontent.com/95208578/195366234-7777a959-ddaa-4b8a-ad5a-3e76aff101e8.png)
 ![image](https://user-images.githubusercontent.com/95208578/195366318-5fb0f8b5-785a-499d-ad9f-b5064a83092d.png)
 ![image](https://user-images.githubusercontent.com/95208578/195366414-2a1a45dc-daa6-46ae-8d1e-a014e2a562a5.png)
@@ -182,6 +206,12 @@ plot(rand, type = 'h', xlab = "x")
 
 
 ### B. Generate Histogram dari Distribusi Normal dengan breaks 50
+```
+hist(rand,
+     breaks = 50,
+     main = "5025211020_Calvin Janitra_Probstat_Probstat A_DNhistogram",
+     xlab = "x")
+```
 ![image](https://user-images.githubusercontent.com/95208578/195368255-ec76bfa0-ba39-4c26-a268-8469625bd6ea.png)
 ### C. Nilai Varian (σ²)
 Nilai varian didapatkan dari
