@@ -125,16 +125,16 @@ paste("Nilai Varian : ", varian)
 ## 5. Diketahui bilangan acak (random variable) berdistribusi exponential (λ = 3)
 ### A. Fungsi Probabilitas dari Distribusi Exponensial
 ```
-n <- 10
 lambda <- 3
-paste("Hasil : ", rexp(n,rate = lambda))
+peluang <- dexp(1, lambda)
+peluang
 ```
-![image](https://user-images.githubusercontent.com/95208578/195180565-86cc4a5e-a1e5-4787-82e7-2fcbfbc6454a.png)
+![image](https://user-images.githubusercontent.com/95208578/195365276-1639b20a-9b04-4b4b-8a0a-5c3050353ab9.png)
 ### B. Histogram dari Distribusi Exponensial untuk 10, 100, 1000 dan 10000 bilangan random
-![image](https://user-images.githubusercontent.com/95208578/195181115-4f081ac5-d74b-45dc-abf6-0aeed880743c.png)
-![image](https://user-images.githubusercontent.com/95208578/195181160-eda31b4b-d9a8-42e3-bbac-e9d69a7a1848.png)
-![image](https://user-images.githubusercontent.com/95208578/195181204-fb2b5725-e29d-404d-b00d-ec290758bbe0.png)
-![image](https://user-images.githubusercontent.com/95208578/195181262-64cb786c-39c4-4b2a-b413-dffe893273ab.png)
+![image](https://user-images.githubusercontent.com/95208578/195366234-7777a959-ddaa-4b8a-ad5a-3e76aff101e8.png)
+![image](https://user-images.githubusercontent.com/95208578/195366318-5fb0f8b5-785a-499d-ad9f-b5064a83092d.png)
+![image](https://user-images.githubusercontent.com/95208578/195366414-2a1a45dc-daa6-46ae-8d1e-a014e2a562a5.png)
+![image](https://user-images.githubusercontent.com/95208578/195366476-4fd45902-d29e-4970-ae56-c24d5d72182f.png)
 
 ### C. Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Exponensial untuk n = 100 dan λ = 3
 Rataan dan varian dapat dari rumus
