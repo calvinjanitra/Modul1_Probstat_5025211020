@@ -59,7 +59,7 @@ a
 ![image](https://user-images.githubusercontent.com/95208578/195176400-0233c5ef-5426-4017-a333-71fe6e07b9d9.png)
 
 ### B. Gambarkan grafik histogram
-![image](https://user-images.githubusercontent.com/95208578/195177589-8dfcb15a-cb48-4167-8cbb-44c033d48729.png)
+![image](https://user-images.githubusercontent.com/95208578/195369548-e8e983fd-d036-4d63-bf32-1cfe9c161d27.png)
 
 ### C. Nilai Rataan (μ) dan Varian (σ²)
 Rataan dan varian didapatkan dari rumus berikut
@@ -82,6 +82,11 @@ paste("Hasil : ",dpois(x,lambda))
 ![image](https://user-images.githubusercontent.com/95208578/195179575-199d8757-2e05-4d28-ba98-a4f2f9325d61.png)
 
 ### B. Simulasikan dan buatlah histogram kelahiran 6 bayi akan lahir di rumah sakit ini  selama setahun
+```
+hist(rbinom(20, 20, 0.2),
+     main = "Histogram Distribusi Binomial",
+     xlab = "x")
+```
 ![image](https://user-images.githubusercontent.com/95208578/195178795-c80eba44-c511-4ab6-b438-4d0e070ccc1b.png)
 ### C. Bandingkan hasil poin a dan b
 ```
